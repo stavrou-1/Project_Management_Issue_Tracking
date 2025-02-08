@@ -1,0 +1,34 @@
+@LightningTracker.API_HostAddress = https://localhost:7078
+
+GET {{LightningTracker.API_HostAddress}}/api/TodoItems
+Accept: application/json
+###
+
+GET {{LightningTracker.API_HostAddress}}/api/TodoItems/1
+Accept: application/json
+###
+
+POST {{LightningTracker.API_HostAddress}}/api/TodoItems
+Content-Type: application/json
+Accept-Language: en-US,en;q=0.5
+
+{
+    "name": "Bill 3",
+    "isComplete": false
+}
+###
+
+PUT {{LightningTracker.API_HostAddress}}/api/TodoItems/1
+Content-Type: application/json
+Accept-Language: en-US,en;q=0.5
+
+{
+    "id": 1,
+    "name": "Bill Johnson 2",
+    "isComplete": false
+}
+###
+
+DELETE {{LightningTracker.API_HostAddress}}/api/TodoItems/1
+Accept: application/json
+###
